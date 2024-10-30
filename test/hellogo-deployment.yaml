@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  name: hellogo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellogo
+      lab: hellogo
+  template:
+    metadata:
+      labels:
+        app: hellogo
+        lab: hellogo
+    spec:
+      containers:
+        - name: hellogo-container
+          image: wl00254294/hellogo
+          ports:
+            - containerPort: 8080
