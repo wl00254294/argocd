@@ -4,7 +4,7 @@ metadata:
   name: $name
 spec:
   containers:
-  - name: $name
-    image: $image
-    ports:
-    - containerPort: $port
+    - name: $name
+      image: $image
+      ports:
+        - containerPort: $port
